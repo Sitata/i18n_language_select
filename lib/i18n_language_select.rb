@@ -40,7 +40,7 @@ end
 
 ActionView::Base.send(:include, I18nLanguageSelect::FormHelpers)
 if Rails::VERSION::MAJOR >= 4
-  ActionView::Helpers::ActiveModelInstanceTag.send(:include, I18nLanguageSelect::InstanceTag)
+  ActionView::Helpers::Tags::Select.send(:include, I18nLanguageSelect::InstanceTag)
 else
   ActionView::Helpers::InstanceTag.send(:include, I18nLanguageSelect::InstanceTag)
 end
